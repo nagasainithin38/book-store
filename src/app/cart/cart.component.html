@@ -1,0 +1,20 @@
+<div *ngIf="cartList.length==0" class="text-center display-6 text-primary">
+    Your cart is empty
+</div>
+<div *ngIf="!(cartList.length==0)" class="mb-3 text-center display-6 text-primary">
+    Cart
+</div>
+<div *ngIf="cartList.length>0" class="text-center d-flex flex-column gap-2 align-items-stretch ">
+
+    <app-cart-card *ngFor="let i of cartList; let index=index" [cartitem]="i" [index]="index" 
+        (quantitydec)="decrease($event)" (quantityinc)="increase($event)">
+
+    </app-cart-card>
+</div>
+
+<div *ngIf="!(cartList.length==0)" class="mb-3 text-center display-6 text-primary">
+   <hr>
+   <div>{{getTotal()|currency:"EUR"}}</div>
+   <hr>
+   <button class="btn btn-primary" (click)="buynow()" >Buy Now</button>
+</div>

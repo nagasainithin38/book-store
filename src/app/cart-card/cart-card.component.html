@@ -1,0 +1,29 @@
+<div class="card mb-3" >
+    <div class="d-flex justify-content-between">
+      
+        <img [src]="cartitem.book.image" class=" d-block rounded-start" height="auto" width="70px">
+    
+      
+        <div class="card-body">
+          <h5 class="card-title">{{  cartitem.book.title  }}</h5>
+          
+          <p class="card-text"><small class="text-body-secondary"> {{cartitem.book.author }} </small></p>
+        <div class="d-flex justify-content-between">
+          <div class="btn-group btn-group-sm" role="group" aria-label="Small button group">
+            <button type="button" class="btn btn-outline-primary" (click)="decrease()" > - </button>
+            <button type="button" class="btn btn-outline-primary" disabled> {{cartitem.quantity}} </button>
+            <button type="button" class="btn btn-outline-primary" (click)="increase()" > + </button>
+          </div>
+
+          <div class="d-flex dlex-column justify-content-between">
+
+            <div> {{cartitem.book.price.value*cartitem.quantity|currency:"EUR"}} </div>
+            <div></div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>

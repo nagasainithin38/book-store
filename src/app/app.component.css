@@ -1,0 +1,21 @@
+.app-display{
+    height:100vh;
+    /* padding-top: 20px; */
+    padding-right: 0px!important;
+    overflow-y: scroll;
+}
+.app-display::-webkit-scrollbar {
+    display: none;
+  }
+
+  .app-cart{
+    height:100vh;
+    padding-top: 20px;
+    background-color: #f6f5f5;
+    overflow-y: scroll;
+    /* width:100%; */
+    overflow-wrap:wrap ;
+}
+.app-cart::-webkit-scrollbar {
+    display: none;
+  }

@@ -1,0 +1,9 @@
+<div class="card" style="width: 16rem;">
+    <img [src]="book.image" class="card-img-top" height="150px" alt="">
+    <div class="card-body">
+        <h5 class="card-title">{{book.title}}</h5>
+        <h6 class="opacity-50">{{book.author}} </h6>
+        <div class="fw-1 fs-1   "> {{changeToInt(book.price.displayValue) |currency:"EUR" }} </div>
+        <button class="btn btn-primary" (click)="addToCart()">Add To Cart</button>
+      </div>
+</div>
